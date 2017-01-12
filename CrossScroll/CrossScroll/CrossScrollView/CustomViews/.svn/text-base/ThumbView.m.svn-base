@@ -1,0 +1,96 @@
+//
+//  ThumbView.m
+//  EPaperCatalog
+//
+//  Created by  on 7/23/12.
+//  Copyright (c) 2012 Apple Inc. All rights reserved.
+//
+
+#import "ThumbView.h"
+#import "ScrollableItem.h"
+
+@implementation ThumbView
+@synthesize sourceURL;
+@synthesize delegate;
+@synthesize imgView;
+@synthesize btnBack;
+@synthesize lblTitle;
+@synthesize activity;
+@synthesize bIsLoading;
+@synthesize item;
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+    }
+    return self;
+}
+
+- (void) resetWithImageURL: (NSString*) sUrl withTitle: (NSString*) sTitle
+{
+    if (self.bIsLoading) {
+        return;
+    }    
+    self.sourceURL = sUrl;
+    self.lblTitle.text = sTitle;
+    [self.activity startAnimating];
+    [NSThread detachNewThreadSelector: @selector(loadImage) toTarget: self withObject: nil];
+}
+
+- (void) resetWithItem: (ScrollableItem*) aItem
+{
+    self.item = aItem;
+    if (self.bIsLoading) {
+        return;
+    }    
+    self.sourceURL = aItem.thumbnailURL;
+    self.lblTitle.text = aItem.title;
+    [self.activity startAnimating];
+    [NSThread detachNewThreadSelector: @selector(loadImage) toTarget: self withObject: nil];
+}
+
+- (void) setTitle:(NSString *)title
+{
+    self.lblTitle.text = title;
+}
+
+- (void) loadImage
+{
+    @autoreleasepool {
+        self.bIsLoading = YES;          
+        NSData* data = [NSData dataWithContentsOfURL: [NSURL URLWithString: self.sourceURL]];
+        UIImage* image = [UIImage imageWithData: data];
+        if (image == nil) {
+            image = [UIImage imageNamed: @"no_image.png"];
+        }
+        
+        [self.imgView performSelectorOnMainThread: @selector(setImage:) withObject:image waitUntilDone: NO];
+        if (self.delegate != nil) {
+            if ([self.delegate respondsToSelector: @selector(onImageLoaded:image:)]) {
+                [self.delegate onImageLoaded: self image: image];
+            }
+        }
+        [self.activity performSelectorOnMainThread: @selector(stopAnimating) withObject:nil waitUntilDone: NO];
+        self.bIsLoading = NO;
+    }
+}
+
+- (void) highlight: (BOOL) bHighlight
+{
+    if (bHighlight) {
+        [self.btnBack setImage: [UIImage imageNamed: @"btn_highlighted.png"] forState: UIControlStateNormal];
+    }
+    else
+        [self.btnBack setImage: [UIImage imageNamed: @"btn_normal.png"] forState: UIControlStateNormal];
+}
+
+- (IBAction) onClicked:(id)sender
+{
+    if (self.delegate) {
+        [self.delegate onClicked: self];
+    }
+}
+
+@end

@@ -1,0 +1,29 @@
+//
+//  ThumbScrollView.h
+//  EPaperCatalog
+//
+//  Created by  on 7/23/12.
+//  Copyright (c) 2012 Apple Inc. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "ThumbView.h"
+
+#define     TAG_BASE        100
+
+@protocol ThumbScrollViewDelegate <NSObject>
+- (void) clickedOnIndex: (NSInteger) index;
+@end
+
+@interface ThumbScrollView : UIView <ThumbViewDelegate>
+
+@property (nonatomic, strong) UIScrollView* scrollView;
+@property (nonatomic, strong) id<ThumbScrollViewDelegate> delegate;
+@property (nonatomic, assign) NSInteger             countOfViews;
+@property (nonatomic, assign) NSInteger             selectedIndex;
+
+@property (nonatomic, assign) NSInteger             type;
+@property (nonatomic, strong) NSMutableArray*       arrayOfItems;
+
+- (void) resetWithScrollableItems: (NSMutableArray*) items;
+@end

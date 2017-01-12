@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/!svn/ver/8/trunk/Pr2/View/CustomViews
+END
+ItemView.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/Pr2/View/CustomViews/ItemView.h
+END
+ThumbScrollView.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/10/trunk/Pr2/View/CustomViews/ThumbScrollView.h
+END
+ThumbView.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/10/trunk/Pr2/View/CustomViews/ThumbView.h
+END
+ThumbScrollView.m
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/10/trunk/Pr2/View/CustomViews/ThumbScrollView.m
+END
+ItemView.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/4/trunk/Pr2/View/CustomViews/ItemView.m
+END
+ThumbView.m
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/10/trunk/Pr2/View/CustomViews/ThumbView.m
+END
+CrossScrollView.h
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/10/trunk/Pr2/View/CustomViews/CrossScrollView.h
+END
+ItemView.xib
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/4/trunk/Pr2/View/CustomViews/ItemView.xib
+END
+ThumbView.xib
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/10/trunk/Pr2/View/CustomViews/ThumbView.xib
+END
+CrossScrollView.m
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/10/trunk/Pr2/View/CustomViews/CrossScrollView.m
+END

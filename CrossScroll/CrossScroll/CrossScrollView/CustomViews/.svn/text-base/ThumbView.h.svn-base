@@ -1,0 +1,36 @@
+//
+//  ThumbView.h
+//  EPaperCatalog
+//
+//  Created by  on 7/23/12.
+//  Copyright (c) 2012 Apple Inc. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+#define THUMB_HEIGHT        150
+#define THUMB_WIDTH         120
+
+@class ScrollableItem;
+
+@protocol ThumbViewDelegate
+- (void) onClicked: (id) sender;
+- (void) onImageLoaded: (id) sender image: (UIImage*) image;
+@end
+
+@interface ThumbView : UIView
+@property (nonatomic, strong) NSString* sourceURL;
+@property (nonatomic, strong) NSObject<ThumbViewDelegate>* delegate;
+
+@property (nonatomic, strong) IBOutlet UIImageView* imgView;
+@property (nonatomic, strong) IBOutlet UIButton*    btnBack;
+@property (nonatomic, strong) IBOutlet UILabel*     lblTitle;
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView* activity;
+@property (nonatomic, assign) BOOL                  bIsLoading;
+
+@property (nonatomic, strong) ScrollableItem*       item;
+
+- (void) resetWithImageURL: (NSString*) sUrl withTitle: (NSString*) sTitle;
+- (void) highlight: (BOOL) bHighlight;
+- (void) setTitle:(NSString*) title;
+@end

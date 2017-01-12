@@ -1,0 +1,125 @@
+//
+//  ThumbScrollView.m
+//  EPaperCatalog
+//
+//  Created by  on 7/23/12.
+//  Copyright (c) 2012 Apple Inc. All rights reserved.
+//
+
+#import "ThumbScrollView.h"
+#import "ThumbView.h"
+#import "ScrollableItem.h"
+
+#define     GAP             1
+
+@implementation ThumbScrollView
+@synthesize     scrollView;
+@synthesize     delegate;
+@synthesize     countOfViews;
+@synthesize     selectedIndex;
+@synthesize     type;
+@synthesize     arrayOfItems;
+
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self initView];
+    }
+    return self;
+}
+
+- (id) initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder: aDecoder];
+    if (self) {
+        [self initView];
+    }
+    return self;
+}
+
+- (void) initView
+{
+    CGRect rt = self.frame;
+    rt.origin = CGPointZero;
+    rt.size.height = THUMB_HEIGHT;
+    self.scrollView = [[UIScrollView alloc] initWithFrame: rt];
+    [self addSubview: scrollView];
+    self.backgroundColor = [UIColor clearColor];
+    self.scrollView.backgroundColor = [UIColor clearColor];
+}
+
+- (void) resetWithScrollableItems: (NSMutableArray*) items
+{
+    self.arrayOfItems = items;
+    
+    int startX, x;
+    self.countOfViews = [items count] - 1;
+    int expectedWidth = (self.countOfViews) * (THUMB_WIDTH+GAP);
+    if (expectedWidth < self.frame.size.width) {
+        startX = (self.frame.size.width - expectedWidth) / 2;
+    }
+    
+    for (int i=0; i<self.countOfViews; i++) {
+        ScrollableItem* item = [items objectAtIndex: i +1];
+        x = i * (THUMB_WIDTH + GAP) + startX;
+
+        ThumbView* view = (ThumbView*)[[[NSBundle mainBundle] loadNibNamed: @"ThumbView" owner: nil options: nil] objectAtIndex: 0];
+        view.frame = CGRectMake(x, 0, THUMB_WIDTH, THUMB_HEIGHT);
+        view.delegate = self;
+        view.tag = TAG_BASE + i;
+        if (item.thumbnail == nil) {
+            [view resetWithImageURL: item.thumbnailURL withTitle: item.title];
+        }
+        else {
+            view.imgView.image = item.thumbnail;
+        }
+        [self.scrollView addSubview: view];
+    }
+    self.scrollView.contentSize = CGSizeMake( (THUMB_WIDTH+GAP)*self.countOfViews, THUMB_HEIGHT);
+}
+
+- (void) layoutSubviews
+{
+    CGRect rt = self.frame;
+    rt.origin = CGPointZero;
+    rt.size.height = THUMB_HEIGHT;
+    self.scrollView.frame = rt;
+ 
+    int startX = 0;
+    
+    for (int i=0; i<self.countOfViews; i++) {
+        ThumbView* thumbView = (ThumbView*)[self.scrollView viewWithTag: i+TAG_BASE];
+        int x = i * (THUMB_WIDTH + GAP) + startX;
+        thumbView.frame = CGRectMake(x, 0, THUMB_WIDTH, THUMB_HEIGHT);
+    }
+}
+
+- (void) highlightViewAtIndex: (BOOL) bHighlight atIndex: (NSInteger) index
+{
+    ThumbView* thumbView = (ThumbView*)[self.scrollView viewWithTag: index+TAG_BASE];
+    [thumbView highlight: bHighlight];
+}
+
+- (void) onClicked:(id)sender
+{
+    [self highlightViewAtIndex: NO atIndex: self.selectedIndex];
+    self.selectedIndex = [sender tag] - TAG_BASE;
+    [self highlightViewAtIndex: YES atIndex: self.selectedIndex];
+    
+    if (self.delegate) {
+        [self.delegate clickedOnIndex: self.selectedIndex];
+    }
+}
+
+- (void) onImageLoaded:(id)sender image:(UIImage *)image
+{
+    NSInteger index = [sender tag] - TAG_BASE;
+    NSObject* obj = [self.arrayOfItems objectAtIndex: index];
+    
+    if ([obj respondsToSelector: @selector(setThumbnail:)]) {
+        [obj performSelector: @selector(setThumbnail:) withObject: image];
+    }
+}
+
+@end

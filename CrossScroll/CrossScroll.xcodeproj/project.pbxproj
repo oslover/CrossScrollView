@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0085BE3E171CD74500EE86F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0085BE3D171CD74500EE86F1 /* UIKit.framework */; };
+		0085BE40171CD74500EE86F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0085BE3F171CD74500EE86F1 /* Foundation.framework */; };
+		0085BE42171CD74500EE86F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0085BE41171CD74500EE86F1 /* CoreGraphics.framework */; };
+		0085BE48171CD74500EE86F1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0085BE46171CD74500EE86F1 /* InfoPlist.strings */; };
+		0085BE4A171CD74500EE86F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085BE49171CD74500EE86F1 /* main.m */; };
+		0085BE4E171CD74500EE86F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085BE4D171CD74500EE86F1 /* AppDelegate.m */; };
+		0085BE50171CD74500EE86F1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0085BE4F171CD74500EE86F1 /* Default.png */; };
+		0085BE52171CD74500EE86F1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0085BE51171CD74500EE86F1 /* Default@2x.png */; };
+		0085BE54171CD74500EE86F1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0085BE53171CD74500EE86F1 /* Default-568h@2x.png */; };
+		0085BE77171CD87D00EE86F1 /* AddNewItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085BE62171CD87D00EE86F1 /* AddNewItemViewController.m */; };
+		0085BE78171CD87D00EE86F1 /* AddNewItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0085BE63171CD87D00EE86F1 /* AddNewItemViewController.xib */; };
+		0085BE79171CD87D00EE86F1 /* UIView+Capture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085BE66171CD87D00EE86F1 /* UIView+Capture.m */; };
+		0085BE7A171CD87D00EE86F1 /* CrossScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085BE69171CD87D00EE86F1 /* CrossScrollView.m */; };
+		0085BE7B171CD87D00EE86F1 /* ItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085BE6B171CD87D00EE86F1 /* ItemView.m */; };
+		0085BE7C171CD87D00EE86F1 /* ItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0085BE6C171CD87D00EE86F1 /* ItemView.xib */; };
+		0085BE7D171CD87D00EE86F1 /* Group.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085BE6E171CD87D00EE86F1 /* Group.m */; };
+		0085BE7E171CD87D00EE86F1 /* ItemAddNew.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085BE70171CD87D00EE86F1 /* ItemAddNew.m */; };
+		0085BE7F171CD87D00EE86F1 /* ScrollableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085BE72171CD87D00EE86F1 /* ScrollableItem.m */; };
+		0085BE80171CD87D00EE86F1 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0085BE75171CD87D00EE86F1 /* ListViewController.m */; };
+		0085BE81171CD87D00EE86F1 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0085BE76171CD87D00EE86F1 /* ListViewController.xib */; };
+		0085BE85171CD91900EE86F1 /* add_new_item.png in Resources */ = {isa = PBXBuildFile; fileRef = 0085BE83171CD91900EE86F1 /* add_new_item.png */; };
+		0085BE86171CD91900EE86F1 /* no_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 0085BE84171CD91900EE86F1 /* no_image.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0085BE39171CD74500EE86F1 /* CrossScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrossScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0085BE3D171CD74500EE86F1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0085BE3F171CD74500EE86F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0085BE41171CD74500EE86F1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0085BE45171CD74500EE86F1 /* CrossScroll-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrossScroll-Info.plist"; sourceTree = "<group>"; };
+		0085BE47171CD74500EE86F1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0085BE49171CD74500EE86F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0085BE4B171CD74500EE86F1 /* CrossScroll-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CrossScroll-Prefix.pch"; sourceTree = "<group>"; };
+		0085BE4C171CD74500EE86F1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0085BE4D171CD74500EE86F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0085BE4F171CD74500EE86F1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		0085BE51171CD74500EE86F1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0085BE53171CD74500EE86F1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0085BE61171CD87D00EE86F1 /* AddNewItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewItemViewController.h; sourceTree = "<group>"; };
+		0085BE62171CD87D00EE86F1 /* AddNewItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewItemViewController.m; sourceTree = "<group>"; };
+		0085BE63171CD87D00EE86F1 /* AddNewItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNewItemViewController.xib; sourceTree = "<group>"; };
+		0085BE65171CD87D00EE86F1 /* UIView+Capture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Capture.h"; sourceTree = "<group>"; };
+		0085BE66171CD87D00EE86F1 /* UIView+Capture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Capture.m"; sourceTree = "<group>"; };
+		0085BE68171CD87D00EE86F1 /* CrossScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossScrollView.h; sourceTree = "<group>"; };
+		0085BE69171CD87D00EE86F1 /* CrossScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossScrollView.m; sourceTree = "<group>"; };
+		0085BE6A171CD87D00EE86F1 /* ItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemView.h; sourceTree = "<group>"; };
+		0085BE6B171CD87D00EE86F1 /* ItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemView.m; sourceTree = "<group>"; };
+		0085BE6C171CD87D00EE86F1 /* ItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemView.xib; sourceTree = "<group>"; };
+		0085BE6D171CD87D00EE86F1 /* Group.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Group.h; sourceTree = "<group>"; };
+		0085BE6E171CD87D00EE86F1 /* Group.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Group.m; sourceTree = "<group>"; };
+		0085BE6F171CD87D00EE86F1 /* ItemAddNew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemAddNew.h; sourceTree = "<group>"; };
+		0085BE70171CD87D00EE86F1 /* ItemAddNew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemAddNew.m; sourceTree = "<group>"; };
+		0085BE71171CD87D00EE86F1 /* ScrollableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollableItem.h; sourceTree = "<group>"; };
+		0085BE72171CD87D00EE86F1 /* ScrollableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollableItem.m; sourceTree = "<group>"; };
+		0085BE74171CD87D00EE86F1 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		0085BE75171CD87D00EE86F1 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		0085BE76171CD87D00EE86F1 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		0085BE83171CD91900EE86F1 /* add_new_item.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_new_item.png; sourceTree = "<group>"; };
+		0085BE84171CD91900EE86F1 /* no_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_image.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0085BE36171CD74500EE86F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0085BE3E171CD74500EE86F1 /* UIKit.framework in Frameworks */,
+				0085BE40171CD74500EE86F1 /* Foundation.framework in Frameworks */,
+				0085BE42171CD74500EE86F1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0085BE2E171CD74500EE86F1 = {
+			isa = PBXGroup;
+			children = (
+				0085BE43171CD74500EE86F1 /* CrossScroll */,
+				0085BE3C171CD74500EE86F1 /* Frameworks */,
+				0085BE3A171CD74500EE86F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0085BE3A171CD74500EE86F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0085BE39171CD74500EE86F1 /* CrossScroll.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0085BE3C171CD74500EE86F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0085BE3D171CD74500EE86F1 /* UIKit.framework */,
+				0085BE3F171CD74500EE86F1 /* Foundation.framework */,
+				0085BE41171CD74500EE86F1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0085BE43171CD74500EE86F1 /* CrossScroll */ = {
+			isa = PBXGroup;
+			children = (
+				0085BE60171CD87D00EE86F1 /* CrossScrollView */,
+				0085BE73171CD87D00EE86F1 /* Example */,
+				0085BE4C171CD74500EE86F1 /* AppDelegate.h */,
+				0085BE4D171CD74500EE86F1 /* AppDelegate.m */,
+				0085BE44171CD74500EE86F1 /* Supporting Files */,
+			);
+			path = CrossScroll;
+			sourceTree = "<group>";
+		};
+		0085BE44171CD74500EE86F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0085BE45171CD74500EE86F1 /* CrossScroll-Info.plist */,
+				0085BE46171CD74500EE86F1 /* InfoPlist.strings */,
+				0085BE49171CD74500EE86F1 /* main.m */,
+				0085BE4B171CD74500EE86F1 /* CrossScroll-Prefix.pch */,
+				0085BE4F171CD74500EE86F1 /* Default.png */,
+				0085BE51171CD74500EE86F1 /* Default@2x.png */,
+				0085BE53171CD74500EE86F1 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0085BE60171CD87D00EE86F1 /* CrossScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				0085BE82171CD91900EE86F1 /* Resource */,
+				0085BE61171CD87D00EE86F1 /* AddNewItemViewController.h */,
+				0085BE62171CD87D00EE86F1 /* AddNewItemViewController.m */,
+				0085BE63171CD87D00EE86F1 /* AddNewItemViewController.xib */,
+				0085BE64171CD87D00EE86F1 /* Categories */,
+				0085BE67171CD87D00EE86F1 /* CustomViews */,
+				0085BE6D171CD87D00EE86F1 /* Group.h */,
+				0085BE6E171CD87D00EE86F1 /* Group.m */,
+				0085BE6F171CD87D00EE86F1 /* ItemAddNew.h */,
+				0085BE70171CD87D00EE86F1 /* ItemAddNew.m */,
+				0085BE71171CD87D00EE86F1 /* ScrollableItem.h */,
+				0085BE72171CD87D00EE86F1 /* ScrollableItem.m */,
+			);
+			path = CrossScrollView;
+			sourceTree = "<group>";
+		};
+		0085BE64171CD87D00EE86F1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0085BE65171CD87D00EE86F1 /* UIView+Capture.h */,
+				0085BE66171CD87D00EE86F1 /* UIView+Capture.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		0085BE67171CD87D00EE86F1 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				0085BE68171CD87D00EE86F1 /* CrossScrollView.h */,
+				0085BE69171CD87D00EE86F1 /* CrossScrollView.m */,
+				0085BE6A171CD87D00EE86F1 /* ItemView.h */,
+				0085BE6B171CD87D00EE86F1 /* ItemView.m */,
+				0085BE6C171CD87D00EE86F1 /* ItemView.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		0085BE73171CD87D00EE86F1 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				0085BE74171CD87D00EE86F1 /* ListViewController.h */,
+				0085BE75171CD87D00EE86F1 /* ListViewController.m */,
+				0085BE76171CD87D00EE86F1 /* ListViewController.xib */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		0085BE82171CD91900EE86F1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0085BE83171CD91900EE86F1 /* add_new_item.png */,
+				0085BE84171CD91900EE86F1 /* no_image.png */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0085BE38171CD74500EE86F1 /* CrossScroll */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0085BE5D171CD74500EE86F1 /* Build configuration list for PBXNativeTarget "CrossScroll" */;
+			buildPhases = (
+				0085BE35171CD74500EE86F1 /* Sources */,
+				0085BE36171CD74500EE86F1 /* Frameworks */,
+				0085BE37171CD74500EE86F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrossScroll;
+			productName = CrossScroll;
+			productReference = 0085BE39171CD74500EE86F1 /* CrossScroll.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0085BE30171CD74500EE86F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = qingxin;
+			};
+			buildConfigurationList = 0085BE33171CD74500EE86F1 /* Build configuration list for PBXProject "CrossScroll" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0085BE2E171CD74500EE86F1;
+			productRefGroup = 0085BE3A171CD74500EE86F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0085BE38171CD74500EE86F1 /* CrossScroll */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0085BE37171CD74500EE86F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0085BE48171CD74500EE86F1 /* InfoPlist.strings in Resources */,
+				0085BE50171CD74500EE86F1 /* Default.png in Resources */,
+				0085BE52171CD74500EE86F1 /* Default@2x.png in Resources */,
+				0085BE54171CD74500EE86F1 /* Default-568h@2x.png in Resources */,
+				0085BE78171CD87D00EE86F1 /* AddNewItemViewController.xib in Resources */,
+				0085BE7C171CD87D00EE86F1 /* ItemView.xib in Resources */,
+				0085BE81171CD87D00EE86F1 /* ListViewController.xib in Resources */,
+				0085BE85171CD91900EE86F1 /* add_new_item.png in Resources */,
+				0085BE86171CD91900EE86F1 /* no_image.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0085BE35171CD74500EE86F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0085BE4A171CD74500EE86F1 /* main.m in Sources */,
+				0085BE4E171CD74500EE86F1 /* AppDelegate.m in Sources */,
+				0085BE77171CD87D00EE86F1 /* AddNewItemViewController.m in Sources */,
+				0085BE79171CD87D00EE86F1 /* UIView+Capture.m in Sources */,
+				0085BE7A171CD87D00EE86F1 /* CrossScrollView.m in Sources */,
+				0085BE7B171CD87D00EE86F1 /* ItemView.m in Sources */,
+				0085BE7D171CD87D00EE86F1 /* Group.m in Sources */,
+				0085BE7E171CD87D00EE86F1 /* ItemAddNew.m in Sources */,
+				0085BE7F171CD87D00EE86F1 /* ScrollableItem.m in Sources */,
+				0085BE80171CD87D00EE86F1 /* ListViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0085BE46171CD74500EE86F1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0085BE47171CD74500EE86F1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0085BE5B171CD74500EE86F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		0085BE5C171CD74500EE86F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0085BE5E171CD74500EE86F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CrossScroll/CrossScroll-Prefix.pch";
+				INFOPLIST_FILE = "CrossScroll/CrossScroll-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0085BE5F171CD74500EE86F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CrossScroll/CrossScroll-Prefix.pch";
+				INFOPLIST_FILE = "CrossScroll/CrossScroll-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0085BE33171CD74500EE86F1 /* Build configuration list for PBXProject "CrossScroll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0085BE5B171CD74500EE86F1 /* Debug */,
+				0085BE5C171CD74500EE86F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0085BE5D171CD74500EE86F1 /* Build configuration list for PBXNativeTarget "CrossScroll" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0085BE5E171CD74500EE86F1 /* Debug */,
+				0085BE5F171CD74500EE86F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0085BE30171CD74500EE86F1 /* Project object */;
+}
